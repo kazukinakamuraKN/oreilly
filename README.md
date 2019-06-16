@@ -81,3 +81,18 @@ f(x,y,z) = notx y notz + x noty notz + x y notz
 
 バイナリ変数
 ０と１のみの変数
+
+# シミュレータの起動
+./tools/HardwareSimulator.sh
+
+# Nandを使う
+Nandすごい
+1. Notになる
+    1. in a, out outの場合、Nand(a=a,b=a,out=out)にすれば、not
+    1. A.値を両方に入力すれば、not
+1. Andになる
+    1. in a, b out outの場合、Nand(a=a,b=b,out=w)Nand(a=w,b=w,out=out)でAND
+    1. A.二つの値をNandに入力して、結果をNandに入力すればAnd
+1. Orになる
+    1. in a, b out outの場合、Nand(a=a,b=a,out=w1)Nand(a=b,b=b,out=w2)Nand(a=w1,b=w2,out=out)でOr
+    1. A.一つの値をNandに入力してNotにする。もう片方の値も同じ。双方の結果をNandに入力すれば、Or
